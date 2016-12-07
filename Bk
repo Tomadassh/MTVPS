@@ -1,0 +1,28 @@
+#!/bin/bash
+clear
+echo -e "\033[1;37mFazendo Backup de usuários...\033[0m"
+for user in `awk -F : '$3 > 900 { print $1 }' /etc/passwd |grep -v "nobody" |grep -vi polkitd |grep -vi systemd-[a-z] |grep -vi systemd-[0-9]`
+do
+if [ -e /etc/tomada/senha/$user ]
+then
+pass=$(cat /etc/tomada/senha/$user)
+else
+echo -e "\033[1;31mNão foi possivel ter a senha do usuário\033[1;37m ($user)"
+read -p "Digite a senha manualmente ou tecle ENTER: " pass
+fi
+
+if [ -e /etc/tomada/limite/$user ]
+then
+limite=$(cat /etc/tomada/limite/$user)
+echo "$user:$pass:$limite" >> /etc/tomada/backup
+echo -e "\033[1;37mUser $user Backup [\033[1;31mOK\033[1;37m]\033[0m"
+else
+echo "$user:$pass" >> /etc/tomada/backup
+echo -e "\033[1;37mUser $user Backup [\033[1;31mOK\033[1;37m]\033[0m"
+fi
+done
+echo " "
+echo -e "\033[1;31mBackup completo !!!\033[0m"
+echo " "
+echo -e "\033[1;37mAs informações sobre usuários ficam no arquivo \033[1;31m /etc/tomada/backup \033[1;37m
+Guarde-os para uma futura restauração\033[0m"
