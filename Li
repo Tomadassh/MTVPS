@@ -12,7 +12,7 @@ read -p "Qual o nome do usuário a redefinir: " namer
 clear
 
 	echo -e "\033[1;32mLimite de logins para $namer:\033[0;37m"; read -p " " limit
-  limit $user $limit
+  limit $user $liml
 exit 0
 fi
 
