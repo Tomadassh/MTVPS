@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true; do
-echo -e "\033[1;37m Para sair digite Ctrl + c \033[0m"
+echo -e "\033[1;37m Para sair, tecle Ctrl + c \033[0m"
 echo -e "\033[1;37m -------------------------------------------------------\033[0m"
 echo -e " \033[47;30m   Usuário                :               Conexão/Limite   \033[0m"
 echo -e "\033[1;37m -------------------------------------------------------\033[0m"
