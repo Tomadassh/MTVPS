@@ -20,6 +20,8 @@ then
 		useradd -M -s /bin/false $name -e $valid
 		(echo $pass; echo $pass)|passwd $name 2>/dev/null
     limit $name $liml
+    echo -e "\033[1;36m  Processando dados...\033[0m"
+    sleep 3s
 		echo -e "\033[1;36mUsuário: \033[0m$name"
 		echo -e "\033[1;36mSenha: \033[0m$pass"
 		echo -e "\033[1;36mExpira:\033[0m $datexp"
