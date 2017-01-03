@@ -25,5 +25,7 @@ Du \033[1;30m(Exibir informações sobre os usuários já criados, como data, li
 Bn \033[1;30m(Adicionar Banner paa ser visualizado por usuários no HTTP INJECTOR por exemplo)\033[1;33m
 
 Sp \033[1;30m(Teste de conexão [velocidade de banda])\033[1;33m"
+
+ajuda \033[1;30m(Ajuda sobre o uso deste menú)\033[1;33m"
 exit 0
 fi
