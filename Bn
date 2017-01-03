@@ -8,8 +8,8 @@ read -p ": " banner
 echo "$banner" > $local
 else
 echo "Banner /etc/bannerssh" >> /etc/ssh/sshd_config
-echo "Louvado seja Deus, o Senhor, para sempre!" >> /etc/bannerssh
 service ssh restart > /dev/null 2> /dev/null
 service sshd restart > /dev/null 2> /dev/null
+echo "Pronto!"
 banner
 fi

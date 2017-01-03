@@ -14,15 +14,15 @@ fi
 if [ -e /etc/tomada/limite/$user ]
 then
 limite=$(cat /etc/tomada/limite/$user)
-echo "$user:$pass:$limite" >> /etc/tomada/backup
+echo "$user:$pass:$limite" >> /etc/mtvps
 echo -e "\033[1;37mUser $user Backup [\033[1;31mOK\033[1;37m]\033[0m"
 else
-echo "$user:$pass" >> /etc/tomada/backup
+echo "$user:$pass" >> /etc/mtvps
 echo -e "\033[1;37mUser $user Backup [\033[1;31mOK\033[1;37m]\033[0m"
 fi
 done
 echo " "
 echo -e "\033[1;31mBackup completo !!!\033[0m"
 echo " "
-echo -e "\033[1;37mAs informações sobre usuários ficam no arquivo \033[1;31m /etc/tomada/backup \033[1;37m
+echo -e "\033[1;37mAs informações sobre usuários ficam no arquivo \033[1;31m /etc/mtvps/backup \033[1;37m
 Guarde-os para uma futura restauração\033[0m"
