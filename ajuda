@@ -24,7 +24,7 @@ Du \033[1;30m(Exibir informações sobre os usuários já criados, como data, li
 
 Bn \033[1;30m(Adicionar Banner para ser visualizado por usuários no HTTP INJECTOR por exemplo. Digite a mensagem a ser exibida e tecle enter para salvar)\033[1;33m
 
-Sp \033[1;30m(Realize o teste de velocidade da sua conexão. !Não funciona em todos os servidores!)\033[1;33m"
+Sp \033[1;30m(Realize o teste de velocidade da sua conexão. !Não funciona em todos os servidores!)\033[1;33m
 
 extras \033[1;30m(Apenas para usuários mais avançados. !Se você não conhece sobre as opções deste comando, não mexa!)\033[1;33m"
 
