@@ -16,10 +16,10 @@ read -p "opção: " option
  fi
 
 if [ $option -eq 2 ]; then
- read -p "Nova senha para $name: " pass
+ read -p "Qual o nome do usuário: " name
+ read -p "Qual a nova senha: " pass
  (echo $pass; echo $pass)|passwd $name 2>/dev/null
- echo "$pass" > /etc/tomada/senha/$name
- echo "Nova senha para $name é: $pass"
+ echo "A nova senha do usuário $name é: $pass"
  exit
  fi
 
