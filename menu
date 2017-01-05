@@ -1,4 +1,43 @@
 #!/bin/bash
+if [ $(id -u) -eq 0 ]
+then
+	clear
+else
+	if echo $(id) |grep sudo > /dev/null
+	then
+	clear
+	echo "Você não é root"
+	echo "Seu usuário esta no grupo sudo"
+	echo -e "Para tornar-se root execute \033[1;31msudo su\033[0m"
+	exit
+	else
+	clear
+	echo -e "Você não está como usuário root, nem com seus direitos (sudo)\nPara tornar-se root execute \033[1;31msu\033[0m e digite sua senha root"
+	exit
+	fi
+fi
+
+if [ -d /etc/tomada ]
+then
+echo ""
+else
+mkdir /etc/tomada
+fi
+
+if [ -d /etc/tomada/senha ]
+then
+echo ""
+else
+mkdir /etc/tomada/senha
+fi
+
+if [ -d /etc/tomada/limite ]
+then
+echo ""
+else
+mkdir /etc/tomada/limite
+fi
+
 clear
 echo -e "     \033[40;1;37m CONFIGURAÇÃO MTVPS  \033[0m"
 echo -e "\033[1;31mNo Span, no DDoS, no Torrent, no fraud. Qualquer desrespeito ou violação dos requisitos impostos pela empresa MegaTúnel, estará sujeito a suspensão definitiva do serviço sem aviso prévio e SEM REEMBOLSO!!!\033[0m"
